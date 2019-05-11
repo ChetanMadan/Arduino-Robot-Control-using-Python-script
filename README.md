@@ -1,0 +1,2 @@
+# Arduino-Robot-Control-using-Python-script
+In this project I am using a Pc to send commands to an Arduino based Robot. The transmitter consists of an RF 433 MHz Transmitter module connected to an Arduino Uno / Pro mini / Nano / Mega.The Transmitter Arduino is connected to a laptop/PC via a USB cable for Serial Communication. In our case the Receiver Arduino is a being used to control a Differential Drive Robot. The Receiver Arduino is mounted with an RF 433MHz Receiver Module.
