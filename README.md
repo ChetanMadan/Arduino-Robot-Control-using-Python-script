@@ -35,3 +35,6 @@ In this project I am using a PC to send commands to an Arduino based Robot. The 
 - We need to install Radiohead library for arduino to run the arduino sketches.
 - Download Radiohead Library from [here.](http://www.airspayce.com/mikem/arduino/RadioHead/RadioHead-1.41.zip)
 - Extract the zip file and move the 'Radiohead' folder to Documents/Arduino/Libraries folder.
+
+
+### Final Project picture > Arduino Based Robot.jpg
