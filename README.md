@@ -30,3 +30,8 @@ In this project I am using a PC to send commands to an Arduino based Robot. The 
   - connect the Motor Driver ext_supply terminal to +9V terminal of the battery.
   - connect the Motor Driver Gnd terminal to the Gnd terminal of the battery.
 - connections are well illustrated in the Receiver wiring diagram.png.
+
+### Installing Radiohead library
+- We need to install Radiohead library for arduino to run the arduino sketches.
+- Download Radiohead Library from [here.](http://www.airspayce.com/mikem/arduino/RadioHead/RadioHead-1.41.zip)
+- Extract the zip file and move the 'Radiohead' folder to Documents/Arduino/Libraries folder.

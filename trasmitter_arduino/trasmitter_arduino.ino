@@ -8,7 +8,7 @@ void setup()
   Serial.begin(9600);	  // Debugging only
   if (!driver.init())
     Serial.println("init failed");
-  pinMode(13,OUTPUT);    
+  pinMode(13,OUTPUT);
 }
 
 void loop()
