@@ -15,7 +15,7 @@ void loop()
 {
   const char *msg = "forward";
   const char *msg2 = "left";
-  const char *msg3 = "reverse";
+  const char *msg3 = "back";
   const char *msg4 = "right";
   const char *msg5 = "stop";
   char t = 'q';

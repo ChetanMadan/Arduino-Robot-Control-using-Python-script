@@ -3,7 +3,7 @@ from time import sleep
 from pygame.locals import *
 import serial
 
-ser1 = serial.Serial('/dev/cu.usbmodem143301',9600)
+ser1 = serial.Serial('/dev/cu.usbmodem143101',9600)
 
 size = width,height = 600,400
 black = 0,0,0
@@ -24,6 +24,8 @@ while 1:
         if event.type == KEYDOWN and event.key == K_d:
             print("right")
             ser1.write('d'.encode())
+        if event.type == KEYDOWN and event.key == K_ESCAPE:
+            sys.exit();
         if event.type == KEYUP:
             print("not pressed")
             ser1.write('q'.encode())
