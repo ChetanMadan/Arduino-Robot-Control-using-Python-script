@@ -5,68 +5,33 @@ RH_ASK driver;
 
 void setup()
 {
-    Serial.begin(9600);	  // Debugging only
-    if (!driver.init())
-         Serial.println("init failed");
+  Serial.begin(9600);	  // Debugging only
+  if (!driver.init())
+    Serial.println("init failed");
+  pinMode(13,OUTPUT);    
 }
 
 void loop()
 {
-  if(Serial.available()>0)
+  const char *msg = "forward";
+  const char *msg2 = "left";
+  const char *msg3 = "reverse";
+  const char *msg4 = "right";
+  const char *msg5 = "stop";
+  char t = 'q';
+  if(Serial.available())
   {
-    if(serial.read == 'w')
-    {
-      const char *msg1 = "forward";
-      driver.send((uint8_t *)msg1, strlen(msg1));
-      driver.waitPacketSent();
-    }
-    if(Serial.read == 'y')
-    {
-      const char *msg2 = "stop";
-      driver.send((uint8_t *)msg2, strlen(msg2));
-      driver.waitPacketSent();
-    }
-
-
-    if(serial.read == 'a')
-    {
-      const char *msg3 = "left";
-      driver.send((uint8_t *)msg3, strlen(msg3));
-      driver.waitPacketSent();
-    }
-    if(Serial.read == 'g')
-    {
-      const char *msg2 = "stop";
-      driver.send((uint8_t *)msg2, strlen(msg2));
-      driver.waitPacketSent();
-    }
-
-
-    if(serial.read == 's')
-    {
-      const char *msg4 = "Reverse";
-      driver.send((uint8_t *)msg4, strlen(msg4));
-      driver.waitPacketSent();
-    }
-    if(Serial.read == 'h')
-    {
-      const char *msg2 = "stop";
-      driver.send((uint8_t *)msg2, strlen(msg2));
-      driver.waitPacketSent();
-    }
-
-
-    if(serial.read == 'd')
-    {
-      const char *msg5 = "right";
-      driver.send((uint8_t *)msg5, strlen(msg5));
-      driver.waitPacketSent();
-    }
-    if(Serial.read == 'j')
-    {
-      const char *msg2 = "stop";
-      driver.send((uint8_t *)msg2, strlen(msg2));
-      driver.waitPacketSent();
-    }
+    t=Serial.read();
+    if(t == 'w')
+    digitalWrite(13,1);
+    else if(t == 'a')
+    digitalWrite(13,1);
+    else if(t == 's')
+    digitalWrite(13,1);
+    else if(t == 'd')
+    digitalWrite(13,1);
+    else if(t == 'q')
+    digitalWrite(13,0);
   }
+  delay(10);
 }
