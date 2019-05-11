@@ -23,15 +23,35 @@ void loop()
   {
     t=Serial.read();
     if(t == 'w')
-    digitalWrite(13,1);
+    {
+      driver.send((uint8_t *)msg, strlen(msg));
+      driver.waitPacketSent();
+      digitalWrite(13,1);
+    }
     else if(t == 'a')
-    digitalWrite(13,1);
+    {
+      driver.send((uint8_t *)msg2, strlen(msg2));
+      driver.waitPacketSent();
+      digitalWrite(13,1);
+    }
     else if(t == 's')
-    digitalWrite(13,1);
+    {
+      driver.send((uint8_t *)msg3, strlen(msg3));
+      driver.waitPacketSent();
+      digitalWrite(13,1);
+    }
     else if(t == 'd')
-    digitalWrite(13,1);
+    {
+      driver.send((uint8_t *)msg4, strlen(msg4));
+      driver.waitPacketSent();
+      digitalWrite(13,1);
+    }
     else if(t == 'q')
-    digitalWrite(13,0);
+    {
+      driver.send((uint8_t *)msg5, strlen(msg5));
+      driver.waitPacketSent();
+      digitalWrite(13,0);
+    }
   }
   delay(10);
 }
