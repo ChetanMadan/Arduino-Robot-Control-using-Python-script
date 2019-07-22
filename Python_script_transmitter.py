@@ -1,14 +1,15 @@
 import sys,pygame
-from time import sleep
+import time
+# from time import sleep
 from pygame.locals import *
 import serial
 
-ser1 = serial.Serial('/dev/cu.usbmodem143101',9600)
+ser1 = serial.Serial('/dev/cu.usbmodem143201',9600)
 
 size = width,height = 600,400
 black = 0,0,0
 
-pygame.init()
+pygame.display.init()
 screen = pygame.display.set_mode(size)
 while 1:
     for event in pygame.event.get():
@@ -29,4 +30,4 @@ while 1:
         if event.type == KEYUP:
             print("not pressed")
             ser1.write('q'.encode())
-        sleep(0.1)
+        time.sleep(0.1)
