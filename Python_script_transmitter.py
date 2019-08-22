@@ -4,7 +4,7 @@ import time
 from pygame.locals import *
 import serial
 
-ser1 = serial.Serial('/dev/cu.usbmodem143201',9600)
+ser1 = serial.Serial('/dev/cu.usbmodem141401',9600)
 
 size = width,height = 600,400
 black = 0,0,0

@@ -2,7 +2,7 @@
 #include <RF24.h>
 
 RF24 radio(8,10);
-const byte address[6] = "00001";
+const byte address[6] = "00011";
 
 void setup() {
       Serial.begin(9600);
